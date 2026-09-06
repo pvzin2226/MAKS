@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&display=swap');
+
+/* =========================
+   CORES DO SITE
+========================= */
+
+:root {
+    --preto: #0d080c;
+    --vinho: #2b071d;
+    --roxo: #4a0b42;
+    --rosa-escuro: #8f356d;
+    --rosa: #d96ba8;
+    --creme: #f5d5e8;
+}
+
+/* =========================
+   PÁGINA
+========================= */
+
+body {
+    margin: 0;
+    background: var(--preto);
+    color: var(--creme);
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: linear-gradient(
+        90deg,
+        #170014,
+        #300020,
+        #170014
+    );
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--rosa-escuro);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+}
+
+/* Nome da loja */
+
+header h1 {
+    margin: 0;
+
+    font-family: 'Bodoni Moda', serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    color: var(--creme);
+
+    letter-spacing: 7px;
+
+    text-shadow:
+        0 0 8px rgba(255, 80, 190, 0.4),
+        0 0 20px rgba(255, 80, 190, 0.2);
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    height: 600px;
+
+    background-image: url("fundo.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Escurece a imagem */
+
+.banner::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(10, 0, 8, 0.40);
+}
+
+/* =========================
+   BOTÃO
+========================= */
+
+.banner button {
+    position: relative;
+    z-index: 1;
+
+    padding: 14px 35px;
+
+    font-family: 'Bodoni Moda', serif;
+    font-size: 17px;
+    font-weight: 600;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        var(--roxo),
+        var(--rosa-escuro)
+    );
+
+    border: 1px solid var(--creme);
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 0 10px rgba(217, 107, 168, 0.5);
+
+    transition: 0.3s;
+}
+
+/* Efeito quando passa o mouse */
+
+.banner button:hover {
+    background: linear-gradient(
+        135deg,
+        var(--rosa-escuro),
+        var(--rosa)
+    );
+
+    box-shadow:
+        0 0 10px var(--rosa),
+        0 0 25px rgba(217, 107, 168, 0.7);
+
+    transform: scale(1.08);
+}
+.banner-conteudo {
+    position: relative;
+    z-index: 1;
+
+    text-align: center;
+
+    max-width: 600px;
+}
+
+.banner-conteudo h2 {
+    font-family: 'Bodoni Moda', serif;
+
+    font-size: 52px;
+    font-weight: 600;
+
+    color: white;
+
+    margin: 0 0 10px;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(217, 107, 168, 0.5);
+}
+
+.banner-conteudo p {
+    font-family: Arial, sans-serif;
+
+    font-size: 19px;
+
+    color: #f5d5e8;
+
+    margin-bottom: 30px;
+}
