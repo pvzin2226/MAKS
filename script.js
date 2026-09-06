@@ -1,3 +1,5 @@
-function mensagem() {
-    alert("Olá! Você clicou no botão!");
+function conhecerProdutos() {
+    document.getElementById("produtos").scrollIntoView({
+        behavior: "smooth"
+    });
 }
