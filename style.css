@@ -98,7 +98,7 @@ header h1 {
    BOTÃO
 ========================= */
 
-.banner button {
+.banner .botao {
     position: relative;
     z-index: 1;
 
@@ -132,7 +132,7 @@ header h1 {
 
 /* Efeito quando passa o mouse */
 
-.banner button:hover {
+.banner butao:hover {
     background: linear-gradient(
         135deg,
         var(--rosa-escuro),
