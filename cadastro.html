@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Mak'S</title>
 </head>
+
 <body>
 
+<h1>Cadastrar Produto</h1>
+
+<form id="form-produto">
+
+    <label>Nome do produto:</label>
+    <input type="text" id="nome">
+
+    <br><br>
+
+    <label>Preço:</label>
+    <input type="text" id="preco" value="0,00" inputmode="numeric">
+
+    <br><br>
+
+    <label>Descrição:</label>
+    <textarea id="descricao"></textarea>
+
+    <br><br>
+
+    <label>Imagem:</label>
+    <input type="text" id="imagem" placeholder="batom.jpg">
+
+    <br><br>
+
+    <button type="submit">Adicionar Produto</button>
+
+</form>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>

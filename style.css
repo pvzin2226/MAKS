@@ -190,3 +190,121 @@ header h1 {
     font-style: italic;
     font-weight: normal;
 }
+.menu-direita {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header {
+    position: relative;
+}
+.menu-lateral {
+     position: fixed;
+     top: 0;
+     right: -300px;
+
+     width: 280px;
+     height: 100vh;
+
+     background: linear-gradient(180deg, #170014, #0d080c);
+
+     border-left: 1px solid var(--rosa-escuro);
+
+     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+
+     z-index: 1000;
+
+     padding-top: 30px;
+
+     transition: right 0.4s ease;
+ }
+
+ .menu-lateral.aberto {
+     right: 0;
+ }
+
+ .menu-lateral h2 {
+     text-align: center;
+
+     font-family: 'Bodoni Moda', serif;
+
+     color: var(--creme);
+
+     font-size: 30px;
+
+     letter-spacing: 4px;
+
+     margin-bottom: 40px;
+ }
+
+ .menu-lateral a {
+     display: block;
+
+     padding: 18px 30px;
+
+     color: var(--creme);
+
+     text-decoration: none;
+
+     font-family: Arial, sans-serif;
+
+     transition: 0.3s;
+ }
+
+ .menu-lateral a:hover {
+     background: var(--roxo);
+
+     color: white;
+
+     padding-left: 40px;
+ }
+
+ .fechar-menu {
+     position: absolute;
+
+     top: 15px;
+     right: 20px;
+
+     background: none;
+
+     border: none;
+
+     color: var(--creme);
+
+     font-size: 35px;
+
+     cursor: pointer;
+ }
+ /* =========================
+    LOGIN
+ ========================= */
+
+ body.login {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: var(--preto);
+ }
+ body.login h1 {
+     margin: 0;
+
+     font-family: 'Bodoni Moda', serif;
+
+     font-size: 48px;
+     font-weight: 600;
+
+     color: var(--creme);
+
+     letter-spacing: 7px;
+
+     text-shadow:
+         0 0 8px rgba(255, 80, 190, 0.4),
+         0 0 20px rgba(255, 80, 190, 0.2);
+ }
