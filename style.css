@@ -180,3 +180,13 @@ header h1 {
 
     margin-bottom: 30px;
 }
+.produto img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.produto h4 {
+    font-style: italic;
+    font-weight: normal;
+}
