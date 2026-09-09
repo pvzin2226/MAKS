@@ -77,7 +77,8 @@ if (formulario) {
                 document.getElementById("preco").value.replace(",", ".")
             ),
             descricao: document.getElementById("descricao").value,
-            imagem: document.getElementById("imagem").value
+            imagem: document.getElementById("imagem").value,
+            estoque: parseInt(document.getElementById("estoque").value)
         };
 
         fetch("http://localhost:8080/produtos", {
