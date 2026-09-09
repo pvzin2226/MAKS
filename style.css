@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&display=swap');
-
+@font-face {
+    font-family: 'Annabel';
+    src: url('annabel 1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* =========================
    CORES DO SITE
 ========================= */
@@ -21,9 +26,8 @@ body {
     margin: 0;
     background: var(--preto);
     color: var(--creme);
-    font-family: Arial, sans-serif;
+    font-family: 'Annabel', serif;
 }
-
 /* =========================
    CABEÇALHO
 ========================= */
@@ -50,7 +54,7 @@ header {
 header h1 {
     margin: 0;
 
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Annabel', serif;
 
     font-size: 48px;
     font-weight: 600;
@@ -110,6 +114,8 @@ header h1 {
 
     color: white;
 
+    text-decoration:none;
+
     background: linear-gradient(
         135deg,
         var(--roxo),
@@ -132,7 +138,7 @@ header h1 {
 
 /* Efeito quando passa o mouse */
 
-.banner butao:hover {
+.banner botao:hover {
     background: linear-gradient(
         135deg,
         var(--rosa-escuro),
@@ -307,4 +313,283 @@ header {
      text-shadow:
          0 0 8px rgba(255, 80, 190, 0.4),
          0 0 20px rgba(255, 80, 190, 0.2);
+ }
+ /* Campos do login */
+
+ #form-login input {
+     width: 280px;
+     padding: 12px 18px;
+
+     border: 1px solid var(--rosa-escuro);
+     border-radius: 25px;
+
+     background: #170014;
+     color: var(--creme);
+
+     font-size: 16px;
+
+     outline: none;
+
+     box-sizing: border-box;
+
+     transition: 0.3s;
+ }
+
+ #form-login input:focus {
+     border-color: var(--rosa);
+
+     box-shadow:
+         0 0 10px rgba(217, 107, 168, 0.5);
+ }
+ /* Botão Entrar */
+
+ #form-login button {
+     padding: 14px 35px;
+
+     font-family: 'Bodoni Moda', serif;
+     font-size: 17px;
+     font-weight: 600;
+
+     color: white;
+
+     background: linear-gradient(
+         135deg,
+         var(--roxo),
+         var(--rosa-escuro)
+     );
+
+     border: 1px solid var(--creme);
+
+     border-radius: 30px;
+
+     cursor: pointer;
+
+     letter-spacing: 1px;
+
+     box-shadow:
+         0 0 10px rgba(217, 107, 168, 0.5);
+
+     transition: 0.3s;
+ }
+
+ #form-login button:hover {
+     background: linear-gradient(
+         135deg,
+         var(--rosa-escuro),
+         var(--rosa)
+     );
+
+     box-shadow:
+         0 0 10px var(--rosa),
+         0 0 25px rgba(217, 107, 168, 0.7);
+
+     transform: scale(1.08);
+ }
+ /* =========================
+    =========================
+    CADASTRO
+ ========================= */
+
+body.cadastro {
+    min-height: 100vh;
+    margin: 0;
+
+    background: var(--preto);
+}
+
+.cadastro-caixa {
+    width: 420px;
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: linear-gradient(
+        145deg,
+        #170014,
+        #2b071d
+    );
+
+    border: 1px solid var(--rosa-escuro);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 25px rgba(217, 107, 168, 0.25);
+
+    box-sizing: border-box;
+}
+
+ .cadastro-caixa h1 {
+     margin: 0 0 30px;
+
+     text-align: center;
+
+     font-family: 'Bodoni Moda', serif;
+
+     font-size: 36px;
+
+     color: var(--creme);
+
+     letter-spacing: 3px;
+ }
+
+ #form-produto {
+     display: flex;
+     flex-direction: column;
+ }
+
+ #form-produto label {
+     margin-bottom: 7px;
+
+     color: var(--creme);
+
+     font-size: 15px;
+ }
+
+ #form-produto input,
+ #form-produto textarea {
+     width: 100%;
+
+     padding: 12px 16px;
+
+     margin-bottom: 20px;
+
+     box-sizing: border-box;
+
+     border: 1px solid var(--rosa-escuro);
+
+     border-radius: 25px;
+
+     background: #0d080c;
+
+     color: var(--creme);
+
+     font-size: 16px;
+
+     outline: none;
+ }
+
+ #form-produto textarea {
+     min-height: 100px;
+
+     border-radius: 15px;
+
+     resize: vertical;
+ }
+ #form-produto button {
+     padding: 14px 35px;
+
+     font-family: 'Bodoni Moda', serif;
+     font-size: 17px;
+     font-weight: 600;
+
+     color: white;
+
+     background: linear-gradient(
+         135deg,
+         var(--roxo),
+         var(--rosa-escuro)
+     );
+
+     border: 1px solid var(--creme);
+
+     border-radius: 30px;
+
+     cursor: pointer;
+
+     letter-spacing: 1px;
+
+     box-shadow:
+         0 0 10px rgba(217, 107, 168, 0.5);
+
+     transition: 0.3s;
+ }
+
+ #form-produto button:hover {
+     background: linear-gradient(
+         135deg,
+         var(--rosa-escuro),
+         var(--rosa)
+     );
+
+     box-shadow:
+         0 0 10px var(--rosa),
+         0 0 25px rgba(217, 107, 168, 0.7);
+
+     transform: scale(1.08);
+ }
+ .adicionar-carrinho{
+   c margin-top: 15px;
+ }
+
+ /* =========================
+    CARRINHO
+ ========================= */
+
+ .carrinho {
+     position: fixed;
+
+     top: 0;
+     right: -400px;
+
+     width: 350px;
+     height: 100vh;
+
+     background: linear-gradient(
+         180deg,
+         #170014,
+         #0d080c
+     );
+
+     border-left: 1px solid var(--rosa-escuro);
+
+     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.7);
+
+     z-index: 1000;
+
+     padding: 30px;
+
+     box-sizing: border-box;
+
+     transition: right 0.4s ease;
+ }
+
+ /* Quando o carrinho estiver aberto */
+
+ .carrinho.aberto {
+     right: 0;
+ }
+
+ /* Título */
+
+ .carrinho h2 {
+     text-align: center;
+
+     font-family: 'Bodoni Moda', serif;
+
+     color: var(--creme);
+
+     font-size: 30px;
+
+     letter-spacing: 3px;
+
+     margin-bottom: 30px;
+ }
+
+ /* Botão fechar */
+
+ .fechar-carrinho {
+     position: absolute;
+
+     top: 15px;
+     right: 20px;
+
+     background: none;
+
+     border: none;
+
+     color: var(--creme);
+
+     font-size: 35px;
+
+     cursor: pointer;
  }

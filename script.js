@@ -17,9 +17,25 @@ fetch("http://localhost:8080/produtos")
                     <h3>${produto.nome}</h3>
                     <p>R$ ${produto.preco}</p>
                     <h4>${produto.descricao}</h4>
+
+                    <button class= "adicionar-carrinho">
+                     Adicionar ao carrinho
+                     </button>
                 `;
 
                 lista.appendChild(card);
+
+                const botaoCarrinho = card.querySelector(".adicionar-carrinho");
+                botaoCarrinho.addEventListener("click",function(){
+
+                   carrinho.push(produto);
+
+                   salvarCarrinho();
+
+                   atualizarContadorCarrinho();
+
+                   alert("Produto adicionado ao carrinho!");
+                });
             });
         }
 
@@ -104,6 +120,81 @@ if (fecharMenu && menuLateral) {
 
     fecharMenu.addEventListener("click", function () {
         menuLateral.classList.remove("aberto");
+    });
+
+}
+// =========================
+// CARRINHO
+// =========================
+
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+function salvarCarrinho() {
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+function atualizarContadorCarrinho() {
+
+    const contador = document.getElementById("contador-carrinho");
+
+    if (contador) {
+        contador.textContent = carrinho.length;
+    }
+}
+
+atualizarContadorCarrinho();
+ const botaoCarrinho = document.getElementById("carrinho-botao");
+ const carrinhoTela = document.getElementById("carrinho");
+ const fecharCarrinho = document.getElementById("fechar-carrinho");
+
+
+if (botaoCarrinho && carrinhoTela){
+
+    botaoCarrinho.addEventListener("click", function(){
+
+        const itensCarrinho = document.getElementById("itens-carrinho");
+
+        if (!itensCarrinho) {
+            return;
+        }
+
+        itensCarrinho.innerHTML = "";
+
+        if (carrinho.length === 0) {
+
+            itensCarrinho.innerHTML = "<p>Seu carrinho está vazio.</p>";
+
+        } else {
+
+            carrinho.forEach(function(produto) {
+
+                const item = document.createElement("div");
+
+                item.classList.add("item-carrinho");
+
+                item.innerHTML = `
+                    <h3>${produto.nome}</h3>
+                    <p>R$ ${produto.preco.toFixed(2).replace(".", ",")}</p>
+                `;
+
+                itensCarrinho.appendChild(item);
+
+            });
+
+        }
+
+        carrinhoTela.classList.add("aberto");
+
+    });
+
+}
+
+
+if(fecharCarrinho && carrinhoTela) {
+
+    fecharCarrinho.addEventListener("click", function(){
+
+        carrinhoTela.classList.remove("aberto");
+
     });
 
 }
