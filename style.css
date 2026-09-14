@@ -54,20 +54,20 @@ header {
 header h1 {
     margin: 0;
 
-    font-family: 'Annabel', serif;
+    font-family: 'Bodoni Moda', serif;
 
-    font-size: 48px;
-    font-weight: 600;
+    font-size: 58px;
+    font-weight: 500;
 
-    color: var(--creme);
+    color: #f5d5e8;
 
-    letter-spacing: 7px;
+    letter-spacing: 1px;
 
     text-shadow:
-        0 0 8px rgba(255, 80, 190, 0.4),
-        0 0 20px rgba(255, 80, 190, 0.2);
+        0 0 5px #f5d5e8,
+        0 0 15px #d96ba8,
+        0 0 30px rgba(217, 107, 168, 0.7);
 }
-
 /* =========================
    BANNER
 ========================= */
@@ -130,8 +130,11 @@ header h1 {
 
     letter-spacing: 1px;
 
-    box-shadow:
-        0 0 10px rgba(217, 107, 168, 0.5);
+   box-shadow:
+       0 0 5px #f5d5e8,
+       0 0 12px #d96ba8,
+       0 0 25px #d96ba8,
+       0 0 45px rgba(217, 107, 168, 0.7);
 
     transition: 0.3s;
 }
@@ -173,8 +176,10 @@ header h1 {
     letter-spacing: 2px;
 
     text-shadow:
-        0 0 10px rgba(0, 0, 0, 0.8),
-        0 0 20px rgba(217, 107, 168, 0.5);
+        0 0 5px #f5d5e8,
+        0 0 12px #d96ba8,
+        0 0 25px #d96ba8,
+        0 0 45px rgba(217, 107, 168, 0.7);
 }
 
 .banner-conteudo p {
@@ -206,6 +211,58 @@ header h1 {
     align-items: center;
     gap: 15px;
 }
+ /* USARIO BOTÃO*/
+ .usuario{
+ color:var(--creme);
+
+ display:flex;
+ align-items: center;
+ justify-content:center;
+
+ text-decoration:none;
+ transition:0.3s
+
+ }
+ .usuario svg {
+     width: 40px;
+     height: 40px;
+ }
+
+ .usuario:hover {
+     color: var(--rosa);
+
+     filter:
+         drop-shadow(0 0 5px var(--rosa))
+         drop-shadow(0 0 12px var(--rosa));
+ }
+ .menu-botao {
+     background: transparent;
+     border: none;
+     padding: 0;
+
+     color: var(--creme);
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     cursor: pointer;
+
+     transition: 0.3s;
+ }
+
+ .menu-botao svg {
+     width: 40px;
+     height: 40px;
+ }
+
+ .menu-botao:hover {
+     color: var(--rosa);
+
+     filter:
+         drop-shadow(0 0 5px var(--rosa))
+         drop-shadow(0 0 12px var(--rosa));
+ }
 
 header {
     position: relative;
