@@ -33,18 +33,13 @@ body {
 ========================= */
 
 header {
-    background: linear-gradient(
-        90deg,
-        #170014,
-        #300020,
-        #170014
-    );
+    background: black;
 
     padding: 25px;
 
     text-align: center;
 
-    border-bottom: 1px solid var(--rosa-escuro);
+
 
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
 }
@@ -73,17 +68,15 @@ header h1 {
 ========================= */
 
 .banner {
-    height: 600px;
+    min-height: 900px;
 
-    background-image: url("fundo.jpg");
-    background-size: cover;
-    background-position: center;
+    background: var(--preto);
 
     position: relative;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 /* Escurece a imagem */
@@ -91,11 +84,16 @@ header h1 {
 .banner::before {
     content: "";
 
-    position: absolute;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
 
-    inset: 0;
+    background-image: url("fundo.jpg");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
 
-    background: rgba(10, 0, 8, 0.40);
+    display: block;
 }
 
 /* =========================
@@ -106,20 +104,17 @@ header h1 {
     position: relative;
     z-index: 1;
 
-    padding: 14px 35px;
+    padding: 30px 70px;
 
     font-family: 'Bodoni Moda', serif;
-    font-size: 17px;
+    font-size: 40px;
     font-weight: 600;
 
     color: white;
 
     text-decoration:none;
 
-    background: linear-gradient(
-        135deg,
-        var(--roxo),
-        var(--rosa-escuro)
+    background: transparent;
     );
 
     border: 1px solid var(--creme);
@@ -156,41 +151,14 @@ header h1 {
 }
 .banner-conteudo {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     text-align: center;
 
-    max-width: 600px;
+    max-width: 800px;
+    transform: translate(-60px, -340px);
 }
-
-.banner-conteudo h2 {
-    font-family: 'Bodoni Moda', serif;
-
-    font-size: 52px;
-    font-weight: 600;
-
-    color: white;
-
-    margin: 0 0 10px;
-
-    letter-spacing: 2px;
-
-    text-shadow:
-        0 0 5px #f5d5e8,
-        0 0 12px #d96ba8,
-        0 0 25px #d96ba8,
-        0 0 45px rgba(217, 107, 168, 0.7);
-}
-
-.banner-conteudo p {
-    font-family: Arial, sans-serif;
-
-    font-size: 19px;
-
-    color: #f5d5e8;
-
-    margin-bottom: 30px;
-}
+/*IMAGEM DO PRODUTO*/
 .produto img {
     width: 180px;
     height: 180px;
